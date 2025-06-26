@@ -15,9 +15,9 @@ import (
 )
 
 func main() {
-	err := godotenv.Load()
+	err := godotenv.Load("../.env")
 	if err != nil {
-		log.Panic(err)
+		log.Fatalln("нет окружения аааа помогите", err)
 	}
 
 	var clientFST *ethclient.Client
